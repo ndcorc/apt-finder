@@ -1,5 +1,5 @@
 from sets import Set
-from apscheduler.schedulers.blocking import BlockingScheduler
+#from apscheduler.schedulers.blocking import BlockingScheduler
 import smtplib
 from email.mime.text import MIMEText
 
@@ -32,6 +32,7 @@ def search():
 
 
 if __name__ == "__main__":
-    scheduler = BlockingScheduler()
-    scheduler.add_job(search, 'interval', hours=1)
-    scheduler.start()
+    #scheduler = BlockingScheduler()
+    #scheduler.add_job(search, 'interval', hours=1)
+    #scheduler.start()
+    search()
