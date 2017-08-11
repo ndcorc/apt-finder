@@ -14,8 +14,9 @@ headers = {
 class AptFinder:
     def __init__(self):
         self.url = 'http://www.apartmentfinder.com/Texas/Austin-Apartments/Azul-Lakeshore-Apartments'
-        self.page = requests.get(self.url).content
-        self.soup = bs4.BeautifulSoup(self.page, 'html.parser')
+        self.page = requests.get(self.url)
+        print self.page.status_code
+        self.soup = bs4.BeautifulSoup(self.page.content, 'html.parser')
         self.models = ["1A", "1C", "1F", "2A", "2B", "2C", "2D"]
         self.available = []
 
